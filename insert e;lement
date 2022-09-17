@@ -1,0 +1,33 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+    {
+        int n,i;
+        cin>>n;
+        int a[n];
+        int newm;
+        cin>>newm;
+        for(int i=0;i<n;i++)
+        {
+            cin>>a[i];
+        }
+         i=0;
+       while(a[i]<newm)
+       {
+           i++;
+       }
+       int position =i;
+       for(int i=n;i>position;i--)
+       {
+           a[i]=a[i-1];
+       }
+       a[position]=newm;
+        for(int  i=0;i<n;i++)
+        {
+            cout<<a[i];
+        }
+        
+    }
+
