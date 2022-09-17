@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j,r1,c1,r2,c2;
+    cin>>r1>>c1;
+ //cin>>r2>>c2;
+    int a[r1][c1] ,b[r1][c1];//crr[r1][c2],sum=0;
+    cout<<"first ";
+    for(int i=0;i<r1;i++)
+    {
+        for(int j=0;j<c1;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    
+/*cout<<"second";
+for(int i=0;i<r2;i++)
+{ 
+    cout<<"\n";
+    for(int j=0;j<c2;j++)
+    {
+        cin>>b[i][j];
+    }
+}*/
+
+for(int i=0;i<r1;i++)
+{
+    for(int j=0;j<c1;j++)
+    {
+         b[j][i]=a[i][j];
+    }
+}
+for(int i=0;i<r1;i++)
+{
+    cout<<"\n";
+    for(int j=0;j<c1;j++)
+    {
+        cout<<b[i][j];
+    }
+}
+cout<<"\n";
+
+
+}
