@@ -1,0 +1,39 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int r1,c1,f;
+    cin>>r1>>c1;
+    int a[r1][c1];
+    for(int i=0;i<r1;i++)
+    {
+        for(int j=0;j<c1;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+     for(int i=0;i<r1;i++)
+    {
+        for(int j=0;j<c1;j++)
+        {
+            if(i==j && a[i][j]!=1)
+            {
+            f=1;
+            break;
+            }
+            else if(i!=j && a[i][j]!=0)
+            {
+                f=1;
+                break;
+            }
+        }
+    }
+    if(f==0)
+    {
+        cout<<"matrix is identity ";
+    }
+    else
+    cout<<"matrix is not identity";
+}
