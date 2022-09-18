@@ -1,0 +1,33 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,k;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    cout<<"rotate an array by k position";
+    int no;
+    cin>>no;
+    int temp;
+    while(no>0)
+    {
+    for(int i=0;i<n;i++)
+    {
+        temp=a[0];
+        a[0]=a[i];
+        a[i]=temp;
+        
+    }
+    no--;
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<a[i];
+    }
+}
