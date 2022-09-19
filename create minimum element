@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int sum,minSum,min1Pair,min2Pair;
+    if(a==0 || n<2)
+    switch;
+    min1Pair =a[0];
+    min2Pair =a[1];
+    minSum = min1Pair + min2Pair;
+    
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            sum=a[i] + a[j];
+            if(abs(sum)<abs(minSum))
+            {
+                minSum = sum;
+                min1Pair = a[i];
+                min2Pair = a[j];
+            }
+        }
+    }
+    cout<<" ["<<min1Pair<<","<<min2Pair<<"]";
+    cout<<endl;
+    
+}
