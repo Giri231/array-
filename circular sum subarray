@@ -2,9 +2,10 @@
 using namespace std;
 int main()
 {
-    int n,ans,sum=0,aman;
-    cin>>n>>ans;
+    int n,ans,sum=0,aman,p,t;
+    cin>>n;
     int a[n];
+    int min=a[0];
     for(int i=0;i<n;i++)
     {
         cin>>a[i];
@@ -24,12 +25,38 @@ int main()
        }
        
     }
+    t=max;
+    for(int i=0;i<n;i++)
+    {
+       
+       sum=sum+a[i];
+       if(min>sum)
+       {
+           min=sum;
+       }
+       if(sum>0)
+       {
+           sum=0;
+       }
+       
+    }
+    p=min;
     for(int i=0;i<n;i++)
     {
       sum=sum+a[i];
     }
     
-    int min=sum-max;
-   cout<<min;
+    int b=sum-p;
+  
+       
+       if(b>t)
+       {
+           cout<<b;
+       }
+       else
+       {
+           cout<<t;
+       }
+       
     
 }
