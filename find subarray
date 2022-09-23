@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+   int n,m,i,temp;
+   cin>>n>>m;
+   int a[50],a1[50];
+   for(int i=0;i<n;i++)
+   
+   {
+       cin>>a[i];
+   }
+   
+   for(int i=0;i<m;i++)
+   {
+   cin>>a1[i];
+   }
+   unordered_map<int,int>map;
+   for(int i=0;i<n;i++)
+   {
+       map[a[i]]=1;
+   }
+   for(int i=0;i<m;i++)
+   {
+       if(map[a1[i]]!=1);
+       {
+           cout<<"no";
+       }
+   }
+   cout<<"yes";
+ 
+}
