@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n,i;
+    cin>>n;
+    int a[50];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int maxr=a[0];
+    int step=a[0];
+    int jump=1;
+    for(int i=1;i<n;i++)
+    {
+        if(i==n-1)
+            cout<<jump;
+        if(maxr<a[i]+i)
+            maxr=a[i]+i;
+        
+        step--;
+    
+    if(step==0)
+    {
+        jump++;
+        step=maxr-i;
+    }
+    }
+    cout<<jump;
+}
